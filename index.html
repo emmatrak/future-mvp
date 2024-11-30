@@ -9,68 +9,68 @@
 <body>
     <header>
         <h1>College Tour 4 You</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="dashboard.html">Dashboard</a>
-        </nav>
+        <p>Your one-stop platform to explore college tours!</p>
     </header>
 
-    <main>
-        <section id="filters">
-            <h2>Find Your Perfect College Tour</h2>
-            <form id="filterForm">
-                <input type="text" id="searchBar" placeholder="Search by College Name" oninput="searchColleges()">
+    <!-- Authentication -->
+    <section id="authSection">
+        <h2>Welcome to College Tour 4 You</h2>
+        <button onclick="showLogin()">Login</button>
+        <button onclick="showSignup()">Sign Up</button>
+    </section>
 
-                <label for="type">Type of School:</label>
-                <select id="type" onchange="filterColleges()">
-                    <option value="all">All</option>
-                    <option value="public">Public</option>
-                    <option value="private">Private</option>
-                </select>
+    <!-- Filter and Search Section -->
+    <section id="filterSection" style="display: none;">
+        <input type="text" id="searchBar" placeholder="Search by college name" oninput="searchColleges()" />
+        <div class="filters">
+            <select id="type" onchange="filterColleges()">
+                <option value="all">All Types</option>
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+            <select id="location" onchange="filterColleges()">
+                <option value="all">All Locations</option>
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+            </select>
+            <select id="major" onchange="filterColleges()">
+                <option value="all">All Majors</option>
+                <option value="engineering">Engineering</option>
+                <option value="arts">Arts</option>
+                <option value="science">Science</option>
+            </select>
+            <select id="price" onchange="filterColleges()">
+                <option value="all">All Price Ranges</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+    </section>
 
-                <label for="location">Location:</label>
-                <select id="location" onchange="filterColleges()">
-                    <option value="all">All</option>
-                    <option value="north">North</option>
-                    <option value="south">South</option>
-                    <option value="east">East</option>
-                    <option value="west">West</option>
-                </select>
+    <!-- College List Section -->
+    <section id="collegeList" style="display: none;"></section>
 
-                <label for="major">Major:</label>
-                <select id="major" onchange="filterColleges()">
-                    <option value="all">All</option>
-                    <option value="engineering">Engineering</option>
-                    <option value="arts">Arts</option>
-                    <option value="science">Science</option>
-                    <option value="business">Business</option>
-                </select>
+    <!-- Payment Section (for booking tours) -->
+    <section id="paymentSection" style="display: none;">
+        <h2>Booking Tour</h2>
+        <button onclick="processPayment()">Proceed to Payment</button>
+    </section>
 
-                <label for="price">Price Range:</label>
-                <select id="price" onchange="filterColleges()">
-                    <option value="all">All</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-            </form>
-        </section>
-
-        <section id="results">
-            <h2>Available College Tours</h2>
-            <div id="collegeList">
-                <!-- Filtered colleges will display here dynamically -->
-            </div>
-        </section>
-    </main>
+    <!-- Admin Dashboard Section (for managing colleges) -->
+    <section id="adminDashboard" style="display: none;">
+        <h2>Admin Dashboard</h2>
+        <button onclick="addNewCollege()">Add New College</button>
+    </section>
 
     <footer>
-        <p>&copy; 2024 College Tour 4 You. All rights reserved.</p>
+        <button id="backButton" onclick="window.history.back()">Back</button>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
