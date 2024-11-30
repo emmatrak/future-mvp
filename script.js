@@ -96,5 +96,10 @@ function addNewCollege() {
         type: "private",
         location: "south",
         major: "engineering",
-
-
+        price: "medium",
+        link: "https://www.newcollege.edu"
+    };
+    colleges.push(newCollege); // Add college to list
+    alert("New college added!");
+    renderColleges(colleges); // Re-render the college list
+}
