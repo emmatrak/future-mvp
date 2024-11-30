@@ -3,40 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Tour Finder</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+    <title>College Tour 4 You</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>College Tour Finder</h1>
-        <p>Your guide to exploring college campuses.</p>
+        <h1>College Tour 4 You</h1>
+        <p>Find your perfect college tour. Apply filters to explore options and book personalized visits!</p>
     </header>
     <main>
-        <section>
-            <h2>Search for College Tours</h2>
-            <label for="major">Filter by Major:</label>
-            <select id="major">
-                <option value="all">All Majors</option>
-                <option value="engineering">Engineering</option>
-                <option value="arts">Arts</option>
-                <option value="science">Science</option>
-                <option value="business">Business</option>
-            </select>
-            <button onclick="filterColleges()">Apply Filter</button>
+        <section id="filters">
+            <h2>Filter College Tours</h2>
+            <form id="filterForm">
+                <label for="type">Type of School:</label>
+                <select id="type">
+                    <option value="all">All</option>
+                    <option value="public">Public</option>
+                    <option value="private">Private</option>
+                </select>
+
+                <label for="location">Location:</label>
+                <select id="location">
+                    <option value="all">All Locations</option>
+                    <option value="north">North</option>
+                    <option value="south">South</option>
+                    <option value="east">East</option>
+                    <option value="west">West</option>
+                </select>
+
+                <label for="major">Major:</label>
+                <select id="major">
+                    <option value="all">All Majors</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="arts">Arts</option>
+                    <option value="science">Science</option>
+                    <option value="business">Business</option>
+                </select>
+
+                <label for="price">Price Range:</label>
+                <select id="price">
+                    <option value="all">All Prices</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <button type="button" onclick="filterColleges()">Apply Filters</button>
+            </form>
         </section>
+
         <section id="college-list">
             <h2>Available College Tours</h2>
             <ul>
-                <li data-major="engineering">Engineering College - <a href="#">Tour Link</a></li>
-                <li data-major="arts">Arts College - <a href="#">Tour Link</a></li>
-                <li data-major="science">Science College - <a href="#">Tour Link</a></li>
-                <li data-major="business">Business School - <a href="#">Tour Link</a></li>
+                <li data-type="public" data-location="north" data-major="engineering" data-price="medium">
+                    <strong>North Engineering College</strong> - <a href="#">Tour Link</a> 
+                    <button onclick="bookTour('North Engineering College')">Book Tour</button>
+                </li>
+                <li data-type="private" data-location="south" data-major="arts" data-price="high">
+                    <strong>South Arts University</strong> - <a href="#">Tour Link</a>
+                    <button onclick="bookTour('South Arts University')">Book Tour</button>
+                </li>
+                <li data-type="public" data-location="west" data-major="science" data-price="low">
+                    <strong>West Science Academy</strong> - <a href="#">Tour Link</a>
+                    <button onclick="bookTour('West Science Academy')">Book Tour</button>
+                </li>
+                <li data-type="private" data-location="east" data-major="business" data-price="medium">
+                    <strong>East Business School</strong> - <a href="#">Tour Link</a>
+                    <button onclick="bookTour('East Business School')">Book Tour</button>
+                </li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 College Tour Finder. All rights reserved.</p>
+        <p>&copy; 2024 College Tour 4 You. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script> <!-- Link to JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
+
