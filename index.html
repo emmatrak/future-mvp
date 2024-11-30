@@ -9,22 +9,29 @@
 <body>
     <header>
         <h1>College Tour 4 You</h1>
-        <p>Find your perfect college tour. Apply filters to explore options and book personalized visits!</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
     </header>
+
     <main>
         <section id="filters">
-            <h2>Filter College Tours</h2>
+            <h2>Find Your Perfect College Tour</h2>
             <form id="filterForm">
+                <input type="text" id="searchBar" placeholder="Search by College Name" oninput="searchColleges()">
+
                 <label for="type">Type of School:</label>
-                <select id="type">
+                <select id="type" onchange="filterColleges()">
                     <option value="all">All</option>
                     <option value="public">Public</option>
                     <option value="private">Private</option>
                 </select>
 
                 <label for="location">Location:</label>
-                <select id="location">
-                    <option value="all">All Locations</option>
+                <select id="location" onchange="filterColleges()">
+                    <option value="all">All</option>
                     <option value="north">North</option>
                     <option value="south">South</option>
                     <option value="east">East</option>
@@ -32,8 +39,8 @@
                 </select>
 
                 <label for="major">Major:</label>
-                <select id="major">
-                    <option value="all">All Majors</option>
+                <select id="major" onchange="filterColleges()">
+                    <option value="all">All</option>
                     <option value="engineering">Engineering</option>
                     <option value="arts">Arts</option>
                     <option value="science">Science</option>
@@ -41,43 +48,29 @@
                 </select>
 
                 <label for="price">Price Range:</label>
-                <select id="price">
-                    <option value="all">All Prices</option>
+                <select id="price" onchange="filterColleges()">
+                    <option value="all">All</option>
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
                     <option value="high">High</option>
                 </select>
-
-                <button type="button" onclick="filterColleges()">Apply Filters</button>
             </form>
         </section>
 
-        <section id="college-list">
+        <section id="results">
             <h2>Available College Tours</h2>
-            <ul>
-                <li data-type="public" data-location="north" data-major="engineering" data-price="medium">
-                    <strong>North Engineering College</strong> - <a href="#">Tour Link</a> 
-                    <button onclick="bookTour('North Engineering College')">Book Tour</button>
-                </li>
-                <li data-type="private" data-location="south" data-major="arts" data-price="high">
-                    <strong>South Arts University</strong> - <a href="#">Tour Link</a>
-                    <button onclick="bookTour('South Arts University')">Book Tour</button>
-                </li>
-                <li data-type="public" data-location="west" data-major="science" data-price="low">
-                    <strong>West Science Academy</strong> - <a href="#">Tour Link</a>
-                    <button onclick="bookTour('West Science Academy')">Book Tour</button>
-                </li>
-                <li data-type="private" data-location="east" data-major="business" data-price="medium">
-                    <strong>East Business School</strong> - <a href="#">Tour Link</a>
-                    <button onclick="bookTour('East Business School')">Book Tour</button>
-                </li>
-            </ul>
+            <div id="collegeList">
+                <!-- Filtered colleges will display here dynamically -->
+            </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 College Tour 4 You. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
+
 
