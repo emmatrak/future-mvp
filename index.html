@@ -12,7 +12,7 @@
         <p>Your one-stop platform to explore college tours!</p>
     </header>
 
-    <!-- Authentication -->
+    <!-- Authentication Section -->
     <section id="authSection">
         <h2>Welcome to College Tour 4 You</h2>
         <button onclick="showLogin()">Login</button>
@@ -21,7 +21,9 @@
 
     <!-- Filter and Search Section -->
     <section id="filterSection" style="display: none;">
-        <input type="text" id="searchBar" placeholder="Search by college name" oninput="searchColleges()" />
+        <input type="text" id="searchBar" placeholder="Search by college name" oninput="searchColleges()"/>
+        <button onclick="searchColleges()">Search</button>
+
         <div class="filters">
             <select id="type" onchange="filterColleges()">
                 <option value="all">All Types</option>
@@ -71,6 +73,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
