@@ -1,61 +1,103 @@
-/* General Styles */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
-    background-color: #0047ab;
+    background-color: #0044cc;
     color: white;
-    text-align: center;
-    padding: 1.5rem 0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
 }
 
 main {
-    max-width: 800px;
-    margin: auto;
-    padding: 1rem;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
 }
 
 section {
+    background: white;
+    padding: 1.5rem;
     margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+h2, h3 {
+    color: #0044cc;
 }
 
-li {
-    background: #e6f2ff;
+form label, form input, form select, form textarea, form button {
+    display: block;
     margin: 0.5rem 0;
-    padding: 1rem;
-    border-radius: 5px;
+    width: 100%;
 }
 
-button {
-    background-color: #0047ab;
+form input, form select, form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.7rem;
+    background-color: #0044cc;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #003580;
+form button:hover {
+    background-color: #0033aa;
+}
+
+#results .college-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+#results .college-card button {
+    background-color: #008000;
+    margin-top: 0.5rem;
+}
+
+#results .college-card button:hover {
+    background-color: #005f00;
 }
 
 footer {
     text-align: center;
-    background: #0047ab;
+    background: #0044cc;
     color: white;
     padding: 1rem 0;
-    margin-top: 2rem;
+    position: relative;
 }
+
+footer p {
+    margin: 0;
+}
+
 
