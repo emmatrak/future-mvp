@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Tour Finder</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+</head>
+<body>
+    <header>
+        <h1>College Tour Finder</h1>
+        <p>Your guide to exploring college campuses.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Search for College Tours</h2>
+            <label for="major">Filter by Major:</label>
+            <select id="major">
+                <option value="all">All Majors</option>
+                <option value="engineering">Engineering</option>
+                <option value="arts">Arts</option>
+                <option value="science">Science</option>
+                <option value="business">Business</option>
+            </select>
+            <button onclick="filterColleges()">Apply Filter</button>
+        </section>
+        <section id="college-list">
+            <h2>Available College Tours</h2>
+            <ul>
+                <li data-major="engineering">Engineering College - <a href="#">Tour Link</a></li>
+                <li data-major="arts">Arts College - <a href="#">Tour Link</a></li>
+                <li data-major="science">Science College - <a href="#">Tour Link</a></li>
+                <li data-major="business">Business School - <a href="#">Tour Link</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 College Tour Finder. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>
