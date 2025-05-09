@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>College Tour 4 You</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="collegeDetails">
+            <h2 id="collegeName">North University</h2>
+            <p id="collegeDescription">
+                A prestigious public university located in the North with a focus on Engineering and Science.
+            </p>
+            <ul>
+                <li>Type: Public</li>
+                <li>Location: North</li>
+                <li>Price: Low</li>
+                <li>Major: Engineering</li>
+            </ul>
+            <button onclick="bookTour()">Book Tour</button>
+        </section>
+
+        <section id="reviews">
+            <h3>Student Reviews</h3>
+            <div id="reviewList">
+                <!-- Reviews dynamically loaded -->
+            </div>
+            <form id="reviewForm">
+                <textarea placeholder="Write your review"></textarea>
+                <button type="button" onclick="submitReview()">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 College Tour 4 You. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
